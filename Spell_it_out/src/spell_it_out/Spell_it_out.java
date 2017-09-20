@@ -16,6 +16,7 @@ public class Spell_it_out {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
+        Spell spell = new Spell();
+        }
     
 }

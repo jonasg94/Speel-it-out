@@ -24,7 +24,7 @@ public class Number {
     List <String> number_spell = new ArrayList<>();
     public Number(int number){
         small_numbers = Arrays.asList("Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine","Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen","Eighteen", "Nineteen");
-        tens_numbers = Arrays.asList( "Ten", "Twenty", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety");
+        tens_numbers = Arrays.asList( "", " ", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety");
         scale_numbers = Arrays.asList("", "Thousand", "Million", "Billion");
         number_spell.add(" ");
         this.number = number;
@@ -64,12 +64,16 @@ public class Number {
                 if(centenas> 0){
                     number_spell.add(small_numbers.get(centenas) + " hundread " );
                 }
-                if(dezenas> 0 ){
+                if(dezenas> 1 ){
                     number_spell.add(tens_numbers.get(dezenas) + " ");
-                }
+                
                 if(unidades> 0){
                     number_spell.add(small_numbers.get(unidades) + " ");
                 
+                }
+                }
+                else{
+                    number_spell.add(small_numbers.get(dezenas_unidades) + " ");
                 }
               number_spell.add(scale_numbers.get(i) + " " );
               if(i!=0){
